@@ -1,4 +1,4 @@
-from typing import Any, Callable, NamedTuple, Optional, Sequence, Tuple, Union
+from typing import Any, Callable, NamedTuple, Optional, Sequence, Tuple, Union, ContextManager
 
 from affine import Affine
 from numpy.typing import DTypeLike, NDArray
@@ -18,6 +18,8 @@ from rasterio.env import Env
 
 Bands = Union[int, Sequence[int]]
 
+
+
 def open(
     fp,
     mode: str = ...,
@@ -31,7 +33,7 @@ def open(
     nodata: Nodata | None = ...,
     sharing: bool = ...,
     **kwargs
-) -> Union[DatasetReader, DatasetWriter]: ...
+) -> Union[DatasetReader, DatasetWriter, ContextManager]: ...
 
 class Band(NamedTuple):
     ds: AnyDataset
