@@ -1,4 +1,4 @@
-from typing import Any, Callable, NamedTuple, Optional, Sequence, Tuple, Union, ContextManager
+from typing import Any, Callable, NamedTuple, Optional, Sequence, Tuple, Union
 
 from affine import Affine
 from numpy.typing import DTypeLike, NDArray
@@ -33,7 +33,7 @@ def open(
     nodata: Nodata | None = ...,
     sharing: bool = ...,
     **kwargs
-) -> Union[DatasetReader, DatasetWriter, ContextManager]: ...
+) -> Union[DatasetReader, DatasetWriter]: ...
 
 class Band(NamedTuple):
     ds: AnyDataset
