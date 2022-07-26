@@ -14,7 +14,7 @@ from rasterio.__types import (
     Width,
 )
 from rasterio.io import BufferedDatasetWriter, DatasetReader, DatasetWriter, MemoryFile
-from .env import Env
+from rasterio.env import Env
 
 Bands = Union[int, Sequence[int]]
 
